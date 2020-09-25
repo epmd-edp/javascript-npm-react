@@ -5,7 +5,8 @@ WORKDIR /home/node/app
 
 COPY src/* ./
 COPY package*.json ./
-COPY --chown=node:node . .
+COPY . .
+RUN chown -R node:node .
 USER node
 EXPOSE 8080
 CMD [ "node", "app.js" ]
