@@ -1,0 +1,17 @@
+name: javascript-npm-react
+namespace: ""
+cdPipelineName: ""
+cdPipelineStageName: ""
+dnsWildcard: eks-core.aws.main.edp.projects.epam.com
+framework: React
+
+database:
+  required: false
+
+
+ingress:
+  required: false
+
+image:
+  name: javascript-npm-react
+  version: latest
