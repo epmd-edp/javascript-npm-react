@@ -1,7 +1,0 @@
-apiVersion: v1
-description: Helm chart for JavaScript application/service deploying
-name: javascript-npm-react
-version: 1.0
-keywords:
-    - JavaScript
-home: https://www.epam.com
