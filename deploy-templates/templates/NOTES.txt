@@ -1,0 +1,1 @@
+1. Application javascript-npm-react has been successfully deployed!!
