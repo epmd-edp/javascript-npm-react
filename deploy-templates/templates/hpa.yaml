@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "javascript-import-def-github.fullname" . }}
+  name: {{ include "javascript-npm-react.fullname" . }}
   labels:
-    {{- include "javascript-import-def-github.labels" . | nindent 4 }}
+    {{- include "javascript-npm-react.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "javascript-import-def-github.fullname" . }}
+    name: {{ include "javascript-npm-react.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

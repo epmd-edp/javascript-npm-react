@@ -1,11 +1,11 @@
-# Default values for javascript-import-def-github.
+# Default values for javascript-npm-react.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: javascript-import-def-github
+  repository: javascript-npm-react
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -13,7 +13,7 @@ image:
 imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
-framework: react
+framework: React
 
 serviceAccount:
   # Specifies whether a service account should be created

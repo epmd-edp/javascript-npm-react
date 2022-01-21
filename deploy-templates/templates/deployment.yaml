@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "javascript-import-def-github.fullname" . }}
+  name: {{ include "javascript-npm-react.fullname" . }}
   labels:
-    {{- include "javascript-import-def-github.labels" . | nindent 4 }}
+    {{- include "javascript-npm-react.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "javascript-import-def-github.selectorLabels" . | nindent 6 }}
+      {{- include "javascript-npm-react.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "javascript-import-def-github.selectorLabels" . | nindent 8 }}
+        {{- include "javascript-npm-react.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "javascript-import-def-github.serviceAccountName" . }}
+      serviceAccountName: {{ include "javascript-npm-react.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

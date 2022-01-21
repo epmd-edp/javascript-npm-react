@@ -1,5 +1,5 @@
 apiVersion: v2
-name: javascript-import-def-github
+name: javascript-npm-react
 description: A Helm chart for Kubernetes
 
 
@@ -12,7 +12,6 @@ description: A Helm chart for Kubernetes
 # a dependency of application charts to inject those utilities and functions into the rendering
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
-
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
@@ -29,4 +28,3 @@ sources:
   - https://github.com/dfkononov/javascript-npm-react
 maintainers:
   - name: DEV Team
-#test

@@ -3,13 +3,13 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
-    name: {{ include "javascript-import-def-github.serviceAccountName" . }}-edp
+    name: {{ include "javascript-npm-react.serviceAccountName" . }}-edp
 roleRef:
     kind: Role
-    name: edp-{{ include "javascript-import-def-github.serviceAccountName" . }}-role
+    name: edp-{{ include "javascript-npm-react.serviceAccountName" . }}-role
     apiGroup: rbac.authorization.k8s.io
 subjects:
     - kind: ServiceAccount
-      name: {{ include "javascript-import-def-github.serviceAccountName" . }}
+      name: {{ include "javascript-npm-react.serviceAccountName" . }}
 {{ end }}
 {{ end }}

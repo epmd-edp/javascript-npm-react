@@ -1,16 +1,16 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "javascript-import-def-github.fullname" . -}}
+{{- $fullName := include "javascript-npm-react.fullname" . -}}
 {{- $svcPort := .Values.service.port -}}
-{{- $ingressApiIsStable := eq (include "javascript-import-def-github.ingress.isStable" .) "true" -}}
-{{- $ingressSupportsIngressClassName := eq (include "javascript-import-def-github.ingress.supportsIngressClassName" .) "true" -}}
-{{- $ingressSupportsPathType := eq (include "javascript-import-def-github.ingress.supportsPathType" .) "true" -}}
+{{- $ingressApiIsStable := eq (include "javascript-npm-react.ingress.isStable" .) "true" -}}
+{{- $ingressSupportsIngressClassName := eq (include "javascript-npm-react.ingress.supportsIngressClassName" .) "true" -}}
+{{- $ingressSupportsPathType := eq (include "javascript-npm-react.ingress.supportsPathType" .) "true" -}}
 {{- $ingressPathType := .Values.ingress.pathType -}}
 kind: Ingress
-apiVersion: {{ include "javascript-import-def-github.ingress.apiVersion" . }}
+apiVersion: {{ include "javascript-npm-react.ingress.apiVersion" . }}
 metadata:
   name: {{ $fullName }}
   labels:
-    {{- include "javascript-import-def-github.labels" . | nindent 4 }}
+    {{- include "javascript-npm-react.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
