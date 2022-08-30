@@ -1,0 +1,1 @@
+1. Application nm-javascript-npm-react has been successfully deployed!!
